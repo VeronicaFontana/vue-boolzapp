@@ -41,6 +41,10 @@ div{
   height: calc(100% - 140px);
 }
 
+.profile-pic{
+  border-radius: 50%;
+}
+
 
 
 
