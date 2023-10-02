@@ -25,6 +25,7 @@ createApp({
                     status: 'received'
                 }
             ],
+            clicked: false
         },
         {
             name: 'Fabio',
@@ -47,6 +48,7 @@ createApp({
                     status: 'sent'
                 }
             ],
+            clicked: false
         },
         {
             name: 'Samuele',
@@ -69,6 +71,7 @@ createApp({
                     status: 'received'
                 }
             ],
+            clicked: false
         },
         {
             name: 'Alessandro B.',
@@ -86,6 +89,7 @@ createApp({
                     status: 'received'
                 }
             ],
+            clicked: false
         },
         {
             name: 'Alessandro L.',
@@ -103,6 +107,7 @@ createApp({
                     status: 'received'
                 }
             ],
+            clicked: false
         },
         {
             name: 'Claudia',
@@ -125,6 +130,7 @@ createApp({
                     status: 'sent'
                 }
             ],
+            clicked: false
         },
         {
             name: 'Federico',
@@ -142,6 +148,7 @@ createApp({
                     status: 'received'
                 }
             ],
+            clicked: false
         },
         {
             name: 'Davide',
@@ -164,9 +171,11 @@ createApp({
                     status: 'received'
                 }
             ],
+            clicked: false 
         }
     ]
     
     }
   }
+
 }).mount("#app")
