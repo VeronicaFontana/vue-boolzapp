@@ -50,6 +50,24 @@ div{
   width: 80%;
 }
 
+.profile-pic{
+  height: 50px;
+  width: 50px;
+}
+
+.profile-pic img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.settings i{
+  color: #B1B1B1;
+  font-size: 1.5rem;
+  margin: 0 5px;
+}
+
 
 
 
