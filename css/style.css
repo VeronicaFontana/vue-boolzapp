@@ -9,9 +9,6 @@
   height: 100%;
 }
 
-div{
-  border: 1px solid black;
-}
 
 .top-bar, .bottom-bar{
   height: 70px;  
@@ -34,6 +31,7 @@ div{
 
 .main-chat{
   height: calc(100% - 140px);
+  background-image: url(../img/mine.jpg);
 }
 
 .profile-pic{
@@ -41,9 +39,13 @@ div{
 }
 
 .text-bar{
-  background-color: white;
-  width: 80%;
+  width: 85%;
 }
+
+.input-group, .text-bar input{
+  border-radius: 5px;
+}
+
 
 .profile-pic{
   height: 50px;
@@ -57,7 +59,7 @@ div{
   border-radius: 50%;
 }
 
-.settings i{
+.settings i, .bottom-bar i{
   color: #B1B1B1;
   font-size: 1.5rem;
   margin: 0 5px;
@@ -81,11 +83,17 @@ div{
   text-decoration: underline;
 } 
 
+.chat-thumb{
+  border: 1px solid #F8F8F8;
+}
+
 .chat-list-text span:last-child, .chat-thumb span:last-child{
   color: #678291;
   font-size: 0.9rem;
 }
 
-
+.text-bar input{
+  height: 45px;
+}
 
 

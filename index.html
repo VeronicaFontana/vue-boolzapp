@@ -54,7 +54,7 @@
         </div>
 
         <div class="chat-list">
-          <div v-for="contact in contacts" class="chat-thumb d-flex justify-content-between  align-items-center p-3">
+          <div v-for="contact in contacts" class="chat-thumb d-flex justify-content-between align-items-center p-3">
             <div class="d-flex">
               <div class="profile-pic me-3">
               <img :src="contact.avatar" alt="">
@@ -76,19 +76,30 @@
           <div class="user d-flex">
             <div class="profile-pic">Foto</div>
             <div>
-              <span>Nome</span>
+              <span>Nome</span><br>
               <span>Ultimo accesso</span>
             </div>
           </div>
           <div class="settings">
-            Icone
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-paperclip"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
           </div>
         </div>
-        <div class="main-chat"></div>
+
+        <div class="main-chat">
+        </div>
+
         <div class="bottom-bar d-flex justify-content-between align-items-center p-3">
-          <div>Emoji</div>
-          <div class="text-bar">Testo da scrivere</div>
-          <div>Mic</div>
+          <div>
+            <i class="fa-regular fa-face-smile"></i>
+          </div>
+          <div class="text-bar">
+            <input type="text" class="w-100 border-0 px-2" placeholder="Scrivi un messaggio">
+          </div>
+          <div>
+            <i class="fa-solid fa-microphone"></i>
+          </div>
         </div>
       </div>
 
