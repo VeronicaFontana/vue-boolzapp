@@ -79,6 +79,11 @@ div{
   color: #678291;
   font-size: 0.9rem;
   text-decoration: underline;
+} 
+
+.chat-list-text span:last-child, .chat-thumb span:last-child{
+  color: #678291;
+  font-size: 0.9rem;
 }
 
 
