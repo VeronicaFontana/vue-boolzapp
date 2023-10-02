@@ -23,18 +23,13 @@ div{
 }
 
 .ricerca{
-  height: 40px;
-}
-
-.ricerca-bar{
-  background-color: white;
-  height: 30px;
-  margin: 5px 10px;
+  height: 60px;
+  padding: 8px;
 }
 
 .chat-list{
   background-color: white;
-  height: calc(100% - 190px)
+  height: calc(100% - 210px)
 }
 
 .main-chat{
