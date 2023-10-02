@@ -1,0 +1,46 @@
+.background{
+  height: 100vh;
+  background-color: #DBDBD1;
+  padding: 24px 0; 
+}
+
+.container{
+  background-color: #EAEAEA;
+  height: 100%;
+}
+
+div{
+  border: 1px solid black;
+}
+
+.top-bar, .bottom-bar{
+  height: 70px;  
+}
+
+.notifiche{
+  background-color: #8EDAFC;
+  height: 80px;
+}
+
+.ricerca{
+  height: 40px;
+}
+
+.ricerca-bar{
+  background-color: white;
+  height: 30px;
+  margin: 5px 10px;
+}
+
+.chat-list{
+  background-color: white;
+  height: calc(100% - 190px)
+}
+
+.main-chat{
+  height: calc(100% - 140px);
+}
+
+
+
+
