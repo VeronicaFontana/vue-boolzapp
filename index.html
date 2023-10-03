@@ -91,9 +91,9 @@
           </div>
         </div>
 
-        <div class="main-chat">
-          <div v-for="(message, index) in contacts.messages" :class="{'message-sent': message.status === sent, 'message-received': message.status === received}">
-            ciao
+        <div class="main-chat clearfix">
+          <div v-for="(message, index) in contacts[0].messages" :class="{'message-sent': message.status === 'sent', 'message-received': message.status === 'received'}">
+            <span>{{message.message}}</span>
           </div>
         </div>
 
