@@ -58,7 +58,7 @@
         </div>
 
         <div class="chat-list">
-          <div v-for="contact in contacts" :class="{'chat-thumb-active': contact.clicked}" @click="(contact.clicked) = !(contact.clicked)" class="chat-thumb d-flex justify-content-between align-items-center p-3">
+          <div v-for="(contact, index) in contacts" :class="{'chat-thumb-active': contact.clicked}" @click="(contact.clicked) = !(contact.clicked)" class="chat-thumb d-flex justify-content-between align-items-center p-3">
             <div class="d-flex">
               <div class="profile-pic me-3">
               <img :src="contact.avatar" alt="">
@@ -77,11 +77,21 @@
 
       <div class="col-7 chat">
         <div class="top-bar d-flex justify-content-between align-items-center p-3">
-          <div class="user d-flex">
-            <div class="profile-pic">Foto</div>
-            <div>
-              <span class="fw-bold">Nome</span><br> 
+          <div v-if="contacts[0].clicked" class="user d-flex">
+            <div class="profile-pic">
+              <img :src="contacts[0].avatar" alt="">
+            </div>
+            <div class="mx-2">
+              <span class="fw-bold">{{contacts[0].name}}</span><br> 
               <span>Ultimo accesso oggi alle 12:00</span>
+            </div>
+          </div>
+          <div v-else class="user d-flex align-items-center">
+            <div class="profile-pic">
+              <img src="img/avatar_io.jpg" alt="">
+            </div>
+            <div class="mx-2">
+              <span class="fw-bold">Seleziona una chat</span><br> 
             </div>
           </div>
           <div class="settings">
@@ -91,10 +101,13 @@
           </div>
         </div>
 
-        <div class="main-chat p-4 clearfix">
-          <div v-for="(message, index) in contacts[0].messages" class="message-container" :class="{'message-sent': message.status === 'sent', 'message-received': message.status === 'received'}">
-            <span>{{message.message}}</span>
+        <div class="main-chat p-4">
+          <div v-if="contacts[0].clicked" class="clearfix">
+            <div v-for="text in contacts[0].messages" class="message-container" :class="{'message-sent': text.status === 'sent', 'message-received': text.status === 'received'}">
+              <span>{{text.message}}</span>
+            </div>
           </div>
+          
         </div>
 
         <div class="bottom-bar d-flex justify-content-between align-items-center p-3">
@@ -102,7 +115,7 @@
             <i class="fa-regular fa-face-smile"></i>
           </div>
           <div class="text-bar">
-            <input type="text" v-model="newMessage.message" @keyup.enter="addMessage()" class="w-100 border-0 px-2" placeholder="Scrivi un messaggio">
+            <input type="text" @keyup.enter="addMessage()" v-model="newMessage.message" class="w-100 border-0 px-2" placeholder="Scrivi un messaggio">
           </div>
           <div>
             <i class="fa-solid fa-microphone"></i>

@@ -174,19 +174,18 @@ createApp({
                     clicked: false 
                 }
             ],
-            newMessage: [
+            newMessage: 
                 {
                     date: '10/01/2020 15:30:55',
                     message: "",
                     status: 'sent'
                 }
-            ]
         }
     }, 
     methods:{
         addMessage(){
-            this.contacts.messages.push(this.newMessage);
-            this.newMessage = "";
+            console.log(this.newMessage.message)
+            this.contacts[0].messages.push(this.newMessage)
         }
     }
 
