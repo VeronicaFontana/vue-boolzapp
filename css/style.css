@@ -100,6 +100,27 @@
   height: 45px;
 }
 
+.message-sent{
+  background-color: #D5F9BA;
+  height: 40px;
+  float: right;
+}
+
+.message-received{
+  background-color: #FFFFFF;
+  height: 40px;
+  float: left;
+}
+
+/* font: lato 
+to gradient
+0-15vh
+15vh-100%
+
+float right e left, clearfix per evitare che si accavallino in after all'elemento stesso
+*/
+
+
 
 
 

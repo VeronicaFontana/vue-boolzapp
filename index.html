@@ -13,6 +13,10 @@
 
   <script src="https://kit.fontawesome.com/66b933bf5d.js" crossorigin="anonymous"></script>
 
+  <script src="
+  https://cdn.jsdelivr.net/npm/luxon@3.4.3/build/global/luxon.min.js
+  "></script>
+
   <title>Boolzap</title>
 </head>
 <body>
@@ -88,6 +92,9 @@
         </div>
 
         <div class="main-chat">
+          <div v-for="(message, index) in contacts.messages" :class="{'message-sent': message.status === sent, 'message-received': message.status === received}">
+            ciao
+          </div>
         </div>
 
         <div class="bottom-bar d-flex justify-content-between align-items-center p-3">
