@@ -92,7 +92,7 @@
         </div>
 
         <div class="main-chat p-4 clearfix">
-          <div v-for="(message, index) in contacts[0].messages" :class="{'message-sent': message.status === 'sent', 'message-received': message.status === 'received'}">
+          <div v-for="(message, index) in contacts[0].messages" class="message-container" :class="{'message-sent': message.status === 'sent', 'message-received': message.status === 'received'}">
             <span>{{message.message}}</span>
           </div>
         </div>
@@ -102,7 +102,7 @@
             <i class="fa-regular fa-face-smile"></i>
           </div>
           <div class="text-bar">
-            <input type="text" class="w-100 border-0 px-2" placeholder="Scrivi un messaggio">
+            <input type="text" v-model="newMessage.message" @keyup.enter="addMessage()" class="w-100 border-0 px-2" placeholder="Scrivi un messaggio">
           </div>
           <div>
             <i class="fa-solid fa-microphone"></i>
