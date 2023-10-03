@@ -102,29 +102,28 @@
 
 .message-sent{
   background-color: #D5F9BA;
-  height: 40px;
+  text-align: right;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 10px;
   float: right;
 }
 
 .message-received{
   background-color: #FFFFFF;
-  height: 40px;
+  text-align: left;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 10px;
   float: left;
 }
 
-.clearfix::after {
-  content: "";
+.clearfix::after{ 
+  content: ""; 
   clear: both;
   display: table;
-}
+} 
 
-/* font: lato 
-to gradient
-0-15vh
-15vh-100%
-
-float right e left, clearfix per evitare che si accavallino in after all'elemento stesso
-*/
 
 
 
