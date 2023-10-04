@@ -194,10 +194,10 @@ createApp({
     methods:{
         addMessage(){
             console.log(this.newMessage)
-            this.contacts[0].messages.push(this.newMessage)
+            this.contacts[this.indice].messages.push(this.newMessage)
             
             setTimeout(()=>{
-                this.contacts[0].messages.push(this.newResponse)
+                this.contacts[this.indice].messages.push(this.newResponse)
             },2000)
 
             this.newMessage = 
@@ -206,7 +206,7 @@ createApp({
                 message: "",
                 status: 'sent'
             }
-            
+
             console.log(this.newMessage)
         },
         click(index){
