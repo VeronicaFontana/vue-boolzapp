@@ -179,15 +179,23 @@ createApp({
                     date: '10/01/2020 15:30:55',
                     message: "",
                     status: 'sent'
-                }
+                },
+            newResponse:
+                {
+                    date: '10/01/2020 15:30:55',
+                    message: "Non posso rispondere ora :(",
+                    status: 'received'
+                }   
         }
     }, 
     methods:{
         addMessage(){
             console.log(this.newMessage.message)
             this.contacts[0].messages.push(this.newMessage)
+
+            setTimeout(()=>{
+                this.contacts[0].messages.push(this.newResponse)
+            },2000)
         }
     }
-
-
 }).mount("#app")
