@@ -55,7 +55,6 @@
             </span>
             <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="search" aria-describedby="basic-addon1"
             v-model="ricercaParola" @keyup.enter="search(ricercaParola)">
-            <!-- <h2>{{iniziale}}</h2> -->
           </div>
         </div>
 
@@ -108,7 +107,7 @@
                     <li><a class="dropdown-item" href="#" @click="removeMessage(index, indice)">Cancella Messaggio</a></li>
                   </ul>
                 <br>
-                <span class="text-clock">{{contact.messages[contact.messages.length - 1].date}}</span>
+                <span class="text-clock">{{contact.messages[indice].date}}</span>
               </div>
             </div>
           </div>

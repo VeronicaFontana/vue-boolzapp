@@ -199,6 +199,9 @@ createApp({
     methods:{
         addMessage(){
             this.contacts[this.indice].messages.push(this.newMessage)
+
+            this.newMessage.date = this.clock
+            this.newResponse.date = this.clock
             
             setTimeout(()=>{
                 this.contacts[this.indice].messages.push(this.newResponse)
@@ -211,7 +214,7 @@ createApp({
                 status: 'sent'
             }
 
-            console.log(this.newMessage)
+            console.log(this.contacts)
         },
         click(index){
             if(this.contacts[index].clicked && this.flag === true){
