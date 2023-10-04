@@ -234,6 +234,10 @@ createApp({
                 return contact.name === parola
             })
             console.log(this.iniziale)
+        },
+        removeMessage(index){
+            this.contacts[index].messages.splice((this.contacts[index].messages.length - 1), 1)
+            console.log(this.contacts[index].messages.length)
         }
     }, 
     mounted(){
