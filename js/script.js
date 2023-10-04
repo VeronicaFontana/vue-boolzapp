@@ -187,7 +187,8 @@ createApp({
                     status: 'received'
                 },
             cliccato: null,
-            indice: null
+            indice: null,
+            flag: false
         }
     }, 
     methods:{
@@ -200,21 +201,16 @@ createApp({
                 this.contacts[0].messages.push(this.newResponse)
             },2000)
         },
-        click(){
-            if(this.contacts[0].clicked){
-                this.contacts[0].clicked = false;
-                this.cliccato = null;
-                this.indice = null;
-            }else{
-                this.contacts[0].clicked = true;
+        click(index){
+            if(this.contacts[index].clicked && this.flag === true){
+                this.contacts[index].clicked = false;
+                this.flag = false;
+            }else if(this.contacts[index].clicked === false && this.flag === false){
+                this.contacts[index].clicked = true;
+                this.cliccato = true;
+                this.indice = index;
+                this.flag = true;
             }
-            
-            this.contacts.forEach((contact, index)=>{
-                if(contact.clicked === true){
-                    this.cliccato = true;
-                    this.indice = index
-                }
-            })   
         }
     }
 }).mount("#app")

@@ -58,7 +58,7 @@
         </div>
 
         <div class="chat-list">
-          <div v-for="(contact, index) in contacts" :class="{'chat-thumb-active': contact.clicked}" @click="click()" class="chat-thumb d-flex justify-content-between align-items-center p-3">
+          <div v-for="(contact, index) in contacts" :class="{'chat-thumb-active': contact.clicked}" @click="click(index)" class="chat-thumb d-flex justify-content-between align-items-center p-3">
             <div class="d-flex">
               <div class="profile-pic me-3">
               <img :src="contact.avatar" alt="">
