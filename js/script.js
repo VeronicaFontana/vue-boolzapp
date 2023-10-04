@@ -179,14 +179,19 @@ createApp({
                     date: '10/01/2020 15:30:55',
                     message: "",
                     status: 'sent'
-                }
+                },
+            selectedContact: null
         }
     }, 
     methods:{
         addMessage(){
             console.log(this.newMessage.message)
             this.contacts[0].messages.push(this.newMessage)
+        },
+        selectContact(contact){
+            this.selectedContact = contact;
         }
     }
+
 
 }).mount("#app")
