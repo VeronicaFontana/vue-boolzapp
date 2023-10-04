@@ -193,13 +193,21 @@ createApp({
     }, 
     methods:{
         addMessage(){
-            console.log(this.newMessage.message)
+            console.log(this.newMessage)
             this.contacts[0].messages.push(this.newMessage)
-            this.newMessage = ""
-
+            
             setTimeout(()=>{
                 this.contacts[0].messages.push(this.newResponse)
             },2000)
+
+            this.newMessage = 
+            {
+                date: '10/01/2020 15:30:55',
+                message: "",
+                status: 'sent'
+            }
+            
+            console.log(this.newMessage)
         },
         click(index){
             if(this.contacts[index].clicked && this.flag === true){
