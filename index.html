@@ -102,10 +102,13 @@
         </div>
 
         <div class="main-chat p-4">
-          <div v-if="contacts[0].clicked" class="clearfix">
-            <div v-for="text in contacts[0].messages" class="message-container" :class="{'message-sent': text.status === 'sent', 'message-received': text.status === 'received'}">
-              <span>{{text.message}}</span>
+          <div v-for="(contact, index) in contacts" class="message-container">
+            <div v-for="(text, indice) in contact.messages">
+              <div v-if="contacts[index].clicked" :class="{'message-sent': text.status === 'sent', 'message-received': text.status === 'received'}">
+                <span>{{text.message}}</span>
+              </div>
             </div>
+            
           </div>
           
         </div>
