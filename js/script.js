@@ -236,9 +236,7 @@ createApp({
             console.log(this.iniziale)
         },
         removeMessage(index, indice){
-            console.log(index, indice)
-            this.contacts[index].messages.splice((this.contacts[index].messages[indice]), 1)
-            console.log(index, indice)
+            this.contacts[index].messages.splice(indice, 1)
         }
     }, 
     mounted(){
