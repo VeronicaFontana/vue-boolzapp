@@ -101,7 +101,13 @@
           <div v-for="(contact, index) in contacts" class="message-container">
             <div v-for="(text, indice) in contact.messages">
               <div v-if="contacts[index].clicked" :class="{'message-sent': text.status === 'sent', 'message-received': text.status === 'received'}">
-                <span>{{text.message}}</span><br>
+                <span>{{text.message}}</span>
+                  <i class="fa-solid fa-chevron-down ms-2" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Info Messaggio</a></li>
+                    <li><a class="dropdown-item" href="#">Cancella Messaggio</a></li>
+                  </ul>
+                <br>
                 <span class="text-clock">{{clock}}</span>
               </div>
             </div>
