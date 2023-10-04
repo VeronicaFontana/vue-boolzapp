@@ -189,6 +189,7 @@ createApp({
                     status: 'received'
                 },
             cliccato: null,
+            selectedIndex: 0,
             indice: null,
             flag: false,
             clock: "",
@@ -217,16 +218,11 @@ createApp({
             console.log(this.contacts)
         },
         click(index){
-            if(this.contacts[index].clicked && this.flag === true){
-                this.contacts[index].clicked = false;
-                this.flag = false;
-                this.cliccato = false;
-            }else if(this.contacts[index].clicked === false && this.flag === false){
-                this.contacts[index].clicked = true;
-                this.cliccato = true;
-                this.indice = index;
-                this.flag = true;
-            }
+            console.log(index, this.selectedIndex)
+            this.cliccato = true;
+            this.contacts[this.selectedIndex].clicked = false;
+            this.contacts[index].clicked = true;
+            this.selectedIndex = index;
         },
         printClock(){
             this.clock = dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE)
