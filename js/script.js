@@ -191,12 +191,13 @@ createApp({
             cliccato: null,
             indice: null,
             flag: false,
-            clock: ""
+            clock: "",
+            ricercaParola: "",
+            iniziale: []
         }
     }, 
     methods:{
         addMessage(){
-            console.log(this.newMessage)
             this.contacts[this.indice].messages.push(this.newMessage)
             
             setTimeout(()=>{
@@ -216,6 +217,7 @@ createApp({
             if(this.contacts[index].clicked && this.flag === true){
                 this.contacts[index].clicked = false;
                 this.flag = false;
+                this.cliccato = false;
             }else if(this.contacts[index].clicked === false && this.flag === false){
                 this.contacts[index].clicked = true;
                 this.cliccato = true;
@@ -225,6 +227,13 @@ createApp({
         },
         printClock(){
             this.clock = dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE)
+        },
+        search(parola){
+            this.iniziale = this.contacts.filter((contact)=>{
+                console.log("partito")
+                return contact.name === parola
+            })
+            console.log(this.iniziale)
         }
     }, 
     mounted(){

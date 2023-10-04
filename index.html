@@ -29,7 +29,7 @@
             <div class="profile-pic">
               <img src="img/avatar_io.jpg" alt="">
             </div>
-            <span class="mx-2">Veronica</span>
+            <span class="mx-2 fw-bold">Veronica</span>
           </div>
           <div class="settings">
             <i class="fa-solid fa-circle-notch"></i>
@@ -53,7 +53,9 @@
             <span class="input-group-text" id="basic-addon1">
               <i class="fa-solid fa-magnifying-glass"></i>
             </span>
-            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="search" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="search" aria-describedby="basic-addon1"
+            v-model="ricercaParola" @keyup.enter="search(ricercaParola)">
+            <h2>{{iniziale.name}}</h2>
           </div>
         </div>
 
@@ -86,7 +88,7 @@
               <span>Ultimo accesso oggi alle {{clock}}</span>
             </div>
           </div>
-          <div v-else class="user d-flex" >
+          <div v-else class="user d-flex">
           </div>
           <div class="settings">
             <i class="fa-solid fa-magnifying-glass"></i>
