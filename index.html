@@ -71,7 +71,7 @@
             </div>
             </div>
             <div>
-              <span class="text-clock">{{clock}}</span>
+              <span class="text-clock">{{contact.messages[contact.messages.length - 1].date}}</span>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@
                     <li><a class="dropdown-item" href="#" @click="removeMessage(index, indice)">Cancella Messaggio</a></li>
                   </ul>
                 <br>
-                <span class="text-clock">{{clock}}</span>
+                <span class="text-clock">{{contact.messages[contact.messages.length - 1].date}}</span>
               </div>
             </div>
           </div>

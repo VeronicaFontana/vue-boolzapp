@@ -178,13 +178,13 @@ createApp({
             ],
             newMessage: 
                 {
-                    date: '10/01/2020 15:30:55',
+                    date: "",
                     message: "",
                     status: 'sent'
                 },
             newResponse:
                 {
-                    date: '10/01/2020 15:30:55',
+                    date: "",
                     message: "Non posso rispondere ora :(",
                     status: 'received'
                 },
