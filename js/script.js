@@ -1,3 +1,5 @@
+const dt = luxon.DateTime;
+
 const {createApp} = Vue;
 
 createApp({
@@ -188,7 +190,8 @@ createApp({
                 },
             cliccato: null,
             indice: null,
-            flag: false
+            flag: false,
+            clock: ""
         }
     }, 
     methods:{
@@ -219,6 +222,12 @@ createApp({
                 this.indice = index;
                 this.flag = true;
             }
+        },
+        printClock(){
+            this.clock = dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE)
         }
+    }, 
+    mounted(){
+        this.printClock()
     }
 }).mount("#app")

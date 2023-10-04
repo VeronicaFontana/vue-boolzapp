@@ -96,9 +96,14 @@
   background-color: #E9EBEB;
 }
 
-.chat-list-text span:last-child, .chat-thumb span:last-child{
+.chat-list-text span:last-child{
   color: #678291;
   font-size: 0.9rem;
+}
+
+.text-clock{
+  color: #678291;
+  font-size: 0.7rem;
 }
 
 .text-bar input{
