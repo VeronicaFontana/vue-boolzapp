@@ -201,13 +201,19 @@ createApp({
             },2000)
         },
         click(){
+            if(this.contacts[0].clicked){
+                this.contacts[0].clicked = false;
+                this.cliccato = null;
+                this.indice = null;
+            }else{
+                this.contacts[0].clicked = true;
+            }
+            
             this.contacts.forEach((contact, index)=>{
                 if(contact.clicked === true){
                     this.cliccato = true;
                     this.indice = index
-                    console.log(this.indice)
                 }
-                
             })   
         }
     }
