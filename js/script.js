@@ -185,17 +185,30 @@ createApp({
                     date: '10/01/2020 15:30:55',
                     message: "Non posso rispondere ora :(",
                     status: 'received'
-                }   
+                },
+            cliccato: null,
+            indice: null
         }
     }, 
     methods:{
         addMessage(){
             console.log(this.newMessage.message)
             this.contacts[0].messages.push(this.newMessage)
+            this.newMessage = ""
 
             setTimeout(()=>{
                 this.contacts[0].messages.push(this.newResponse)
             },2000)
+        },
+        click(){
+            this.contacts.forEach((contact, index)=>{
+                if(contact.clicked === true){
+                    this.cliccato = true;
+                    this.indice = index
+                    console.log(this.indice)
+                }
+                
+            })   
         }
     }
 }).mount("#app")
