@@ -22,8 +22,9 @@
 <body>
   <section class="background">
     <div id="app" class="container d-flex">
-
+      <!-- SEZIONE A SX, PROFILO ED ELENCO DI CHAT -->
       <div class="col-5 contacts d-flex flex-column">
+        <!-- TOP BAR -->
         <div class="top-bar d-flex justify-content-between align-items-center p-3">
           <div class="user d-flex align-items-center ">
             <div class="profile-pic">
@@ -37,7 +38,7 @@
             <i class="fa-solid fa-ellipsis-vertical"></i>
           </div>
         </div>
-
+        <!-- GESTIONE NOTIFICHE -->
         <div class="notifiche d-flex align-items-center p-3">
           <div class="bell">
             <i class="fa-solid fa-bell-slash"></i>
@@ -47,7 +48,7 @@
             <span class="subtitle">Attiva notifiche desktop</span>
           </div>
         </div>
-
+        <!-- BARRA DI RICERCA -->
         <div class="ricerca">
           <div class="input-group">
             <span class="input-group-text" id="basic-addon1">
@@ -57,7 +58,7 @@
             v-model="ricercaParola" @keyup.enter="search(ricercaParola)">
           </div>
         </div>
-
+        <!-- CHAT LIST -->
         <div class="chat-list">
           <div v-for="(contact, index) in contacts" :class="{'chat-thumb-active': contact.clicked}" @click="click(index)" class="chat-thumb d-flex justify-content-between align-items-center p-3">
             <div class="d-flex">
@@ -76,8 +77,10 @@
         </div>
       </div>
 
+      <!-- SEZIONE A DX, PROFILO CONTATTO E CHAT -->
       <div class="col-7 chat">
         <div class="top-bar d-flex justify-content-between align-items-center p-3">
+          <!-- PROFILO CONTATTO -->
           <div v-if="cliccato" class="user d-flex" >
             <div class="profile-pic">
               <img :src="contacts[selectedIndex].avatar" alt="">
@@ -95,7 +98,7 @@
             <i class="fa-solid fa-ellipsis-vertical"></i>
           </div>
         </div>
-
+        <!-- SEZIONE CHAT -->
         <div class="main-chat p-4">
           <div v-for="(contact, index) in contacts" class="message-container">
             <div v-for="(text, indice) in contact.messages">
@@ -112,7 +115,7 @@
             </div>
           </div>
         </div>
-
+        <!-- BOTTOM BAR, INSERIMENTO MESSAGGIO -->
         <div class="bottom-bar d-flex justify-content-between align-items-center p-3">
           <div>
             <i class="fa-regular fa-face-smile"></i>

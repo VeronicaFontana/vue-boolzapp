@@ -1,6 +1,7 @@
+/* GENERALE */
 .background{
   height: 100vh;
-  background-color: #DBDBD1;
+  background-image: linear-gradient(to bottom,#009688 0px, #009688 15vh, #dddbd1 15vh, #d2dbdc 100%);
   padding: 24px 0; 
 }
 
@@ -14,11 +15,25 @@
   border: 1px solid rgb(196, 196, 196);
 }
 
-
 .top-bar, .bottom-bar{
   height: 70px;  
 }
 
+.settings i, .bottom-bar i{
+  color: #B1B1B1;
+  font-size: 1.5rem;
+  margin: 0 5px;
+}
+
+i:hover, .chat-thumb{
+  cursor: pointer;
+}
+
+.chat-list, .main-chat{
+  overflow: auto;
+}
+
+/* SEZIONE A SX, PROFILO ED ELENCO DI CHAT */
 .notifiche{
   background-color: #8EDAFC;
   height: 80px;
@@ -29,30 +44,8 @@
   padding: 8px;
 }
 
-.chat-list{
-  background-color: white;
-  height: calc(100% - 210px)
-}
-
-.main-chat{
-  height: calc(100% - 140px);
-  background-image: url(../img/mine.jpg);
-}
-
 .profile-pic{
   border-radius: 50%;
-}
-
-.text-bar{
-  width: 85%;
-}
-
-.input-group, .text-bar input{
-  border-radius: 5px;
-}
-
-
-.profile-pic{
   height: 50px;
   width: 50px;
 }
@@ -64,10 +57,8 @@
   border-radius: 50%;
 }
 
-.settings i, .bottom-bar i{
-  color: #B1B1B1;
-  font-size: 1.5rem;
-  margin: 0 5px;
+.input-group, .text-bar input{
+  border-radius: 5px;
 }
 
 .bell{
@@ -96,6 +87,11 @@
   background-color: #E9EBEB;
 }
 
+.chat-list{
+  background-color: white;
+  height: calc(100% - 210px)
+}
+
 .chat-list-text span:last-child{
   color: #678291;
   font-size: 0.9rem;
@@ -104,6 +100,17 @@
 .text-clock{
   color: #678291;
   font-size: 0.7rem;
+}
+
+
+/* SEZIONE A DX, PROFILO UTENTE E CHAT */
+.main-chat{
+  height: calc(100% - 140px);
+  background-image: url(../img/mine.jpg);
+}
+
+.text-bar{
+  width: 85%;
 }
 
 .text-bar input{

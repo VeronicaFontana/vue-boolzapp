@@ -191,14 +191,13 @@ createApp({
             cliccato: null,
             selectedIndex: 0,
             indice: null,
-            flag: false,
             clock: "",
             ricercaParola: "",
             iniziale: []
         }
     }, 
     methods:{
-        addMessage(){
+        addMessage(){ //funzione aggiunta messaggio digitato
             this.contacts[this.indice].messages.push(this.newMessage)
 
             this.newMessage.date = this.clock
@@ -217,24 +216,24 @@ createApp({
 
             console.log(this.contacts)
         },
-        click(index){
+        click(index){ //funzione click thumb lista utenti, comparsa profilo in alto e chat
             console.log(index, this.selectedIndex)
             this.cliccato = true;
             this.contacts[this.selectedIndex].clicked = false;
             this.contacts[index].clicked = true;
             this.selectedIndex = index;
         },
-        printClock(){
+        printClock(){ //funzione stampa ora locale
             this.clock = dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE)
         },
-        search(parola){
+        search(parola){ //funzione filtro utenti per nome
             this.iniziale = this.contacts.filter((contact)=>{
                 console.log("partito")
                 return contact.name === parola
             })
             console.log(this.iniziale)
         },
-        removeMessage(index, indice){
+        removeMessage(index, indice){ //funzione rimozione messaggio selezionato
             this.contacts[index].messages.splice(indice, 1)
         }
     }, 
