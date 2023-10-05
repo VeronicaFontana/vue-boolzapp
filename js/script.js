@@ -27,7 +27,7 @@ createApp({
                             status: 'received'
                         }
                     ],
-                    clicked: false
+                    clicked: true
                 },
                 {
                     name: 'Fabio',
@@ -188,7 +188,7 @@ createApp({
                     message: "Non posso rispondere ora :(",
                     status: 'received'
                 },
-            cliccato: null,
+            cliccato: true,
             selectedIndex: 0,
             indice: null,
             clock: "",
