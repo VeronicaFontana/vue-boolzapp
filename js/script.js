@@ -226,18 +226,18 @@ createApp({
         printClock(){ //funzione stampa ora locale
             this.clock = dt.now().setLocale('it').toLocaleString(dt.TIME_24_SIMPLE)
         },
-        search(parola){ //funzione filtro utenti per nome
-            this.iniziale = this.contacts.filter((contact)=>{
-                console.log("partito")
-                return contact.name === parola
-            })
-            console.log(this.iniziale)
-        },
         removeMessage(index, indice){ //funzione rimozione messaggio selezionato
             this.contacts[index].messages.splice(indice, 1)
         }
     }, 
     mounted(){
         this.printClock()
+    }, 
+    computed:{
+        search(){
+            return this.contacts.filter((contact)=>{
+                return contact.name.toLowerCase().includes(this.ricercaParola.toLowerCase());
+            })
+        }
     }
 }).mount("#app")
