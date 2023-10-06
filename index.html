@@ -67,11 +67,11 @@
             </div>
             <div class="chat-list-text lh-1 ">
               <span class="fw-bold">{{contact.name}}</span><br>
-              <span>{{contact.messages[contact.messages.length - 1].message}}</span>
+              <span>{{getLastMessage(contact)}}</span>
             </div>
             </div>
             <div>
-              <span class="text-clock">{{contact.messages[contact.messages.length - 1].date}}</span>
+              <span class="text-clock">{{getLastDate(contact)}}</span>
             </div>
           </div>
         </div>

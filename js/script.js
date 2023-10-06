@@ -228,6 +228,16 @@ createApp({
         },
         removeMessage(index, indice){ //funzione rimozione messaggio selezionato
             this.contacts[index].messages.splice(indice, 1)
+        },
+        getLastMessage(contact){
+            if(contact.messages.length > 0){
+                return contact.messages.at(-1).message
+            }
+        },
+        getLastDate(contact){
+            if(contact.messages.length > 0){
+                return contact.messages.at(-1).date
+            }
         }
     }, 
     mounted(){
