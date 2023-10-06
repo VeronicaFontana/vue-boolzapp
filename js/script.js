@@ -190,7 +190,7 @@ createApp({
                 },
             cliccato: true,
             selectedIndex: 0,
-            indice: null,
+            indice: 0,
             clock: "",
             ricercaParola: "",
             iniziale: []
